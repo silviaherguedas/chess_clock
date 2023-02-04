@@ -1,0 +1,26 @@
+<section>
+    <div class="timer">
+    <div>Turno de <strong><%= @current_player %></strong></div>
+    <br>
+    <div class="times">
+        <table border="1">
+        <tr>
+            <th>Player 1</th>
+            <th>Player 2</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><%= @times.time1 %></td>
+            <td style="text-align: center;"><%= @times.time2 %></td>
+        </tr>
+        </table>
+    </div>
+    <div id="change">
+        <button phx-click="change_player">CHANGE</button>
+    </div>
+    <div class="winner">
+        <%= if assigns[:winner_message] do %>
+        <%= @winner_message %>
+        <% end %>
+    </div>
+    </div>
+</section>

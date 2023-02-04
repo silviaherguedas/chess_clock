@@ -18,6 +18,8 @@ defmodule ChessClockWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    live "/chess", TimerLive
   end
 
   # Other scopes may use custom stacks.
